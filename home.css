@@ -1,0 +1,100 @@
+:root{
+    --black: #000;
+    --white: #fff;
+    --purple: #1F032A;
+    --lightputple: #420857;
+    --lightgreen: #334A15;
+    --darkgreen: #0B2D1D;
+    --orange: #FFA736;
+}
+
+@font-face {
+    font-family: 'red';
+    src: url(fonts/RedHatDisplay-VariableFont_wght.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'red';
+}
+
+body{
+    width: 1440px;
+    margin: 0 auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--purple);
+}
+
+header{
+    width: 1252px;
+    height: 40px;
+    padding: 42px 155px 0 33px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+    z-index: 999;
+}
+
+nav{
+    width: 438px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+a{
+    color: var(--white);
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+.selected{
+    font-weight: 900;
+}
+
+.navbtn{
+    width: 118px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+button{
+    height: 40px;
+}
+
+.dark_mode{
+    width: 70px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+        background-color: var(--orange);
+}
+
+.language{
+    width: 38px;
+    height: 38px;
+}
+
+.hero{
+    width: 100%;
+    height: 894px;
+    background-image: url(assets/homehero.png);
+    background-size: cover;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: row;
+}
