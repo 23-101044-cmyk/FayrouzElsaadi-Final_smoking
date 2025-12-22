@@ -48,6 +48,20 @@ header{
     justify-content: space-between;
     position: fixed;
     z-index: 999;
+    transition: all 0.3s ease-in-out;
+}
+
+header.shrink{
+    padding: 30px 501px 0 33px;
+        width: 906px;
+    height: 54px;
+}
+
+header.shrink nav{
+    padding: 15px 25px;
+    background: radial-gradient(231% 135.8% at 0.9% 2.98%, rgba(255, 255, 255, 0.40) 0%, rgba(255, 255, 255, 0.00) 100%);
+    backdrop-filter: blur(23.049999237060547px);
+    border-radius: 136px;
 }
 
 nav{
@@ -57,11 +71,7 @@ nav{
     align-items: center;
     flex-direction: row;
     justify-content: space-between;
-    padding: 15px 25px;
-    border-radius: 136px;
-    border: 1px solid var(--white);
-    background: radial-gradient(231% 135.8% at 0.9% 2.98%, rgba(255, 255, 255, 0.40) 0%, rgba(255, 255, 255, 0.00) 100%);
-    backdrop-filter: blur(23.049999237060547px);
+        transition: all 0.3s ease-in-out;
 }
 
 a{

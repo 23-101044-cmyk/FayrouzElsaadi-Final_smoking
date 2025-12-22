@@ -92,3 +92,19 @@ for (let i = 0; i < array1.length; i++) {
 }
 
 document.getElementById("array1").innerHTML = html;
+
+
+
+const header = document.querySelector('header');
+const triggerSection = document.querySelector('#trigger-section');
+
+window.addEventListener('scroll', () => {
+    const sectionTop = triggerSection.offsetTop;
+    const scrollPosition = window.scrollY;
+
+    if (scrollPosition >= sectionTop - 50) {
+        header.classList.add('shrink');
+    } else {
+        header.classList.remove('shrink');
+    }
+});
