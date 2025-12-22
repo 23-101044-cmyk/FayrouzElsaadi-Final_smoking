@@ -64,6 +64,7 @@ font-size: 18px;
 font-style: normal;
 font-weight: 400;
 line-height: normal;
+text-decoration: none;
 }
 
 .selected{
@@ -79,7 +80,7 @@ line-height: normal;
     justify-content: space-between;
 }
 
-.dark_mode{
+.dark_mode_btn{
     width: 70px;
     height: 40px;
     border-radius: 50px;
@@ -92,6 +93,8 @@ line-height: normal;
 .language{
     width: 38px;
     height: 38px;
+    background-color: var(--black);
+    border-radius: 50px;
 }
 
 .hero{
