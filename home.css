@@ -6,6 +6,7 @@
     --lightgreen: #334A15;
     --darkgreen: #0B2D1D;
     --orange: #FFA736;
+    --heroshadow: rgba(255, 255, 255, 0.25);
 }
 
 @font-face {
@@ -26,7 +27,14 @@ body{
     display: flex;
     align-items: center;
     flex-direction: column;
-    background-color: var(--purple);
+    background-color: var(--black);
+}
+
+main{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+        background-color: var(--purple);
 }
 
 header{
@@ -37,7 +45,7 @@ header{
     align-items: center;
     flex-direction: row;
     justify-content: space-between;
-    position: relative;
+    position: fixed;
     z-index: 999;
 }
 
@@ -71,12 +79,9 @@ line-height: normal;
     justify-content: space-between;
 }
 
-button{
-    height: 40px;
-}
-
 .dark_mode{
     width: 70px;
+    height: 40px;
     border-radius: 50px;
     display: flex;
     align-items: center;
@@ -90,11 +95,73 @@ button{
 }
 
 .hero{
-    width: 100%;
+    width: 1440px;
     height: 894px;
     background-image: url(assets/homehero.png);
     background-size: cover;
     display: flex;
     align-items: flex-end;
-    flex-direction: row;
+    flex-direction: column;
+}
+
+.herocont{
+    width: 479px;
+    height: 682px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 98px 132px 88px 116px;
+    background-image: url(assets/herocont.png);
+    background-size: cover;
+    margin-top: 19px;
+}
+
+h1{
+    color: var(--white);
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.marg{
+    margin-bottom: 19px;
+}
+
+.herosub{
+    color: var(--white);
+    text-align: center;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-bottom: 32px;
+}
+
+.padding{
+    padding: 0 13px;
+}
+
+p{
+    color: var(--white);
+    text-align: center;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+
+.herotext{
+    padding: 18px 90px;
+    color: var(--white);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    border-radius: 89px;
+    border: 1px solid #FFF;
+    background: var(--lightputple);
+    box-shadow: 11px 11px 58.2px 0 rgba(0, 0, 0, 0.25);
+    margin-top: 75px;
 }
