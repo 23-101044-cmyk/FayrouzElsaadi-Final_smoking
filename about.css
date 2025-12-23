@@ -319,4 +319,90 @@ line-height: normal;
 .sec2{
     width: 1440px;
     height: 1018px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: var(--darkgrey);
+}
+
+.s2cont{
+    width: 1280px;
+    height: 272px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.abtcard{
+    width: 380px;
+    height: auto;
+    flex-direction: column;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    gap: 10px;
+    background-image: url(assets/shadow.png);
+    background-size: cover;
+    border-radius: 20px;
+border: 2px solid var(--white);
+background: var(--black);
+box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.40);
+}
+
+.abtnm{
+    color: var(--white);
+font-size: 64px;
+font-style: normal;
+font-weight: 700;
+line-height: 96px; /* 150% */
+margin-top: 33.5px;
+margin-left: 34px;
+}
+
+.abttitle{
+    color: var(--white);
+font-size: 24px;
+font-style: normal;
+font-weight: 700;
+line-height: 36px; /* 150% */
+margin-left: 34px;
+}
+
+.abtp{
+    opacity: 0.8;
+    width: 263px;
+    font-size: 16px;
+    margin-left: 34px;
+    margin-bottom: 35px;
+}
+
+.abtp2{
+    opacity: 0.8;
+    width: 263px;
+    font-size: 16px;
+    margin-left: 25px;
+}
+
+.pfp{
+    width: 80px;
+    height: 80px;
+    background-image: url(assets/profile.png);
+    background-size: cover;
+    margin: 25px 0 0 25px;
+}
+
+.time{
+    color: var(--white);
+    opacity: 0.6;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 21px; /* 150% */
+margin: 0 0 25px 25px;
+}
+
+.name{
+    margin: 0 0 0 25px;
 }
