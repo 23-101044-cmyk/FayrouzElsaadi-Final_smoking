@@ -133,13 +133,17 @@ document.addEventListener("DOMContentLoaded", () => {
   const footer = document.getElementById("footer");
 
   contactLink.addEventListener("click", (e) => {
-    e.preventDefault(); // Prevent default jump
+    e.preventDefault(); 
     footer.scrollIntoView({ behavior: "smooth" });
   });
 });
+
+
+
+
 const scrollBtn = document.getElementById("scrollTopBtn");
 
-// Show button after scrolling 200px
+
 window.addEventListener("scroll", () => {
   if (window.scrollY > 200) {
     scrollBtn.classList.add("show");
@@ -148,10 +152,38 @@ window.addEventListener("scroll", () => {
   }
 });
 
-// Scroll to top smoothly
+
 scrollBtn.addEventListener("click", () => {
   window.scrollTo({
     top: 0,
     behavior: "smooth"
+  });
+});
+
+
+
+
+window.addEventListener("load", () => {
+  const preloader = document.getElementById("preloader");
+  preloader.style.opacity = "0";
+  setTimeout(() => {
+    preloader.style.display = "none";
+  }, 500);
+});
+
+
+
+document.querySelectorAll("a").forEach(link => {
+  link.addEventListener("click", (e) => {
+    const href = link.getAttribute("href");
+    if (href && href !== "#") {
+      e.preventDefault(); 
+      const preloader = document.getElementById("preloader");
+      preloader.style.display = "flex";
+      preloader.style.opacity = "1";
+      setTimeout(() => {
+        window.location.href = href;
+      }, 300); 
+    }
   });
 });

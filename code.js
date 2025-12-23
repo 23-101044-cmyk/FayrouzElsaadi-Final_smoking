@@ -22,3 +22,30 @@ function login() {
     document.getElementById("error").textContent = "ERROR: wrong username or password, try again.";
   }
 }
+
+
+
+window.addEventListener("load", () => {
+  const preloader = document.getElementById("preloader");
+  preloader.style.opacity = "0";
+  setTimeout(() => {
+    preloader.style.display = "none";
+  }, 500);
+});
+
+
+
+document.querySelectorAll("a").forEach(link => {
+  link.addEventListener("click", (e) => {
+    const href = link.getAttribute("href");
+    if (href && href !== "#") {
+      e.preventDefault(); 
+      const preloader = document.getElementById("preloader");
+      preloader.style.display = "flex";
+      preloader.style.opacity = "1";
+      setTimeout(() => {
+        window.location.href = href;
+      }, 300); 
+    }
+  });
+});
