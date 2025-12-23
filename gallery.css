@@ -1,0 +1,120 @@
+:root{
+    --black: #000;
+    --white: #fff;
+    --purple: #1F032A;
+    --lightputple: #9400D3;
+    --green: #71DB5B;
+    --yellow: #FFD700;
+    --red: #FF4F79;
+    --offwhite: rgba(255, 255, 255, 0.80);
+    --offwhite2: rgba(255, 255, 255, 0.60);
+    --offblack: rgba(0, 0, 0, 0.3);
+    --offblack2: rgba(0, 0, 0, 0.1);
+}
+
+@font-face {
+    font-family: 'red';
+    src: url(fonts/RedHatDisplay-VariableFont_wght.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'red';
+}
+
+body{
+    width: 1440px;
+    margin: 0 auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--black);
+}
+
+main{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+        background-color: var(--purple);
+}
+
+.hero{
+    padding: 153px 88px;
+    width: 1264px;
+height: 455px;
+display: flex;
+align-items: center;
+flex-direction: row;
+justify-content: space-between;
+}
+
+.heroimg {
+    width: 525px;
+    height: 455px;
+    border-radius: 12px;
+    border: 1px solid var(--white);
+    overflow: hidden;
+    background-color: lightgray;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.herocont{
+    width: 683px;
+height: 430px;
+display: flex;
+align-items: flex-start;
+flex-direction: column;
+justify-content: space-between;
+}
+
+h1{
+    color: var(--white);
+font-size: 96px;
+font-style: normal;
+font-weight: 900;
+line-height: 106.321px; /* 110.751% */
+}
+
+.herosub{
+    color: var(--offwhite);
+font-size: 40px;
+font-style: normal;
+font-weight: 500;
+line-height: 61.171px; /* 152.927% */
+}
+
+.herop{
+color: var(--offwhite2);
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: 38px; /* 158.333% */
+width: 363px;
+}
+
+
+.slides{
+    height: 344.7px;
+    width: 1440px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+
+.arrows{
+    display: flex;
+    width: 51.856px;
+    height: 51.856px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 29000168px;
+    border: 0.864px solid var(--offblack);
+    background: var(--offblack2);
+    margin: 10px;
+}
