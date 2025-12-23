@@ -13,6 +13,21 @@
     --grey: #3C3C3C;
 }
 
+body.light-mode{
+    --black: #ffffff;
+    --white: #000000;
+    --purple: #FFC2E1;
+    --lightputple: #D8A8FA;
+    --lightgreen: #BEF631;
+    --darkgreen: rgb(51, 159, 39);
+    --orange: #FFA736;
+    --heroshadow: rgba(255, 255, 255, 0.25);
+    --vid: rgba(0, 0, 0, 0);
+    --lightgrey: #8F8F8F;
+    --darkgrey: #d4d4d4;
+    --grey: #a8a8a8;
+}
+
 @font-face {
     font-family: 'red';
     src: url(fonts/RedHatDisplay-VariableFont_wght.ttf);
@@ -32,6 +47,7 @@ body{
     align-items: center;
     flex-direction: column;
     background-color: var(--black);
+    transition: all 0.3s ease;
 }
 
 main{
@@ -106,7 +122,12 @@ text-decoration: none;
     display: flex;
     align-items: center;
     justify-content: center;
-        background-color: var(--orange);
+    background-image: url(assets/dark.png);
+    background-size: cover;
+}
+
+body.light-mode .dark_mode_btn {
+    background-image: url('assets/light.png');
 }
 
 .language{
@@ -114,6 +135,7 @@ text-decoration: none;
     height: 38px;
     fill: var(--black);
     border-radius: 50px;
+    stroke: var(--white);
 }
 
 .hero{
@@ -136,6 +158,10 @@ text-decoration: none;
     background-image: url(assets/herocont.png);
     background-size: cover;
     margin-top: 19px;
+}
+
+body.light-mode .herocont {
+    background-image: url('assets/homeherowhite.png'); /* light mode image */
 }
 
 h1{

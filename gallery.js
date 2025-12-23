@@ -76,3 +76,10 @@ function resetInterval() {
     goToSlide(next);
   }, 4000);
 }
+
+
+const button = document.getElementById("toggle-mode");
+
+button.addEventListener("click", () => {
+  document.body.classList.toggle("light-mode");
+});

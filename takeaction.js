@@ -1,0 +1,51 @@
+const button = document.getElementById("toggle-mode");
+
+button.addEventListener("click", () => {
+  document.body.classList.toggle("light-mode");
+});
+
+
+
+
+const form = document.getElementById("contactForm");
+const submitBtn = document.getElementById("submitBtn"); // renamed variable
+
+submitBtn.addEventListener("click", () => {
+
+  const firstName = document.getElementById("firstName").value.trim();
+  const lastName = document.getElementById("lastName").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const date = document.getElementById("date").value.trim();
+  const message = document.getElementById("message").value.trim();
+
+
+  if (!firstName || !lastName || !email || !date || !message) {
+    alert("Please fill in all fields.");
+    return;
+  }
+
+
+  const formData = {
+    firstName,
+    lastName,
+    email,
+    date,
+    message,
+    submittedAt: new Date().toLocaleString()
+  };
+  localStorage.setItem("contactFormData", JSON.stringify(formData));
+
+
+  const msg = document.getElementById("successMsg");
+  msg.style.display = "block";
+
+  form.reset();
+
+  submitBtn.textContent = "Successfully booked";
+  submitBtn.disabled = true;
+
+
+  setTimeout(() => {
+    msg.style.display = "none";
+  }, 4000);
+});

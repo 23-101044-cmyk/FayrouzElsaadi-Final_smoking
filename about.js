@@ -130,3 +130,13 @@ container.addEventListener("click", (e) => {
     btn.textContent = expanded ? "Read less" : "Read more";
   });
 });
+
+
+
+
+
+const button = document.getElementById("toggle-mode");
+
+button.addEventListener("click", () => {
+  document.body.classList.toggle("light-mode");
+});

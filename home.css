@@ -10,6 +10,18 @@
     --vid: rgba(0, 0, 0, 0.681);
 }
 
+body.light-mode{
+    --black: #ffffff;
+    --white: #000000;
+    --purple: #FFC2E1;
+    --lightputple: #D8A8FA;
+    --lightgreen: #BEF631;
+    --darkgreen: rgb(51, 159, 39);
+    --orange: #FFA736;
+    --heroshadow: rgba(255, 255, 255, 0.25);
+    --vid: rgba(0, 0, 0, 0.79);
+}
+
 @font-face {
     font-family: 'red';
     src: url(fonts/RedHatDisplay-VariableFont_wght.ttf);
@@ -103,7 +115,12 @@ text-decoration: none;
     display: flex;
     align-items: center;
     justify-content: center;
-        background-color: var(--orange);
+    background-image: url(assets/dark.png);
+    background-size: cover;
+}
+
+body.light-mode .dark_mode_btn {
+    background-image: url('assets/light.png');
 }
 
 .language{
@@ -121,6 +138,10 @@ text-decoration: none;
     display: flex;
     align-items: flex-end;
     flex-direction: column;
+}
+
+body.light-mode .herocont {
+    background-image: url('assets/homeherowhite.png');
 }
 
 .herocont{
@@ -183,6 +204,7 @@ p{
     background: var(--lightputple);
     box-shadow: 11px 11px 58.2px 0 rgba(0, 0, 0, 0.25);
     margin-top: 75px;
+    cursor: pointer;
 }
 
 .sec1{

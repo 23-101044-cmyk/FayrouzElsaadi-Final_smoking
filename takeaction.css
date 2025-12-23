@@ -1,0 +1,313 @@
+:root{
+    --black: #000;
+    --white: #fff;
+    --purple: #1F032A;
+    --lightputple: #9400D3;
+    --green: #334A15;
+    --yellowop: rgba(255, 217, 0, 0.08);
+    --lightpurpleop:rgba(148, 0, 211, 0.08);
+    --greenop: rgba(112, 219, 91, 0.08);
+    --redop: rgba(255, 79, 120, 0.08);
+    --yellow: #FFD700;
+    --red: #FF4F79;
+    --offwhite: rgba(255, 255, 255, 0.80);
+    --offwhite2: rgba(255, 255, 255, 0.60);
+    --offblack: rgba(0, 0, 0, 0.30);
+    --offblack2: rgba(0, 0, 0, 0.10);
+    --offblack3: rgba(0, 0, 0, 0.80);
+    --offwhite3: rgba(255, 255, 255, 0.10);
+    --offwhite4: rgba(255, 255, 255, 0.20);
+    --whitegreen: #F1FFCC;
+    --darkblu: #060F2E;
+    --formbg: rgba(255, 255, 255, 0.08);
+}
+
+body.light-mode{
+        --formbg: rgba(0, 0, 0, 0.08);
+    --whitegreen: #192103;
+        --darkblu: #677ecf;
+    --black: #ffffff;
+    --white: #000000;
+    --purple: #FFC2E1;
+        --lightputple: #431b60;
+    --green: #BEF631;
+    --yellowop: rgba(255, 217, 0, 0.08);
+    --lightpurpleop:rgba(148, 0, 211, 0.08);
+    --greenop: rgba(112, 219, 91, 0.08);
+    --redop: rgba(255, 79, 120, 0.08);
+    --yellow: #736200;
+    --red: #610e21;
+    --lightgreen: #BEF631;
+    --darkgreen: rgb(51, 159, 39);
+    --orange: #FFA736;
+    --heroshadow: rgba(255, 255, 255, 0.25);
+    --vid: rgba(0, 0, 0, 0);
+    --lightgrey: #8F8F8F;
+    --darkgrey: #d4d4d4;
+    --grey: #a8a8a8;
+        --offwhite: rgba(0, 0, 0, 0.8);
+    --offwhite2: rgba(0, 0, 0, 0.6);
+    --offblack: rgba(255, 255, 255, 0.3);
+    --offblack2: rgba(255, 255, 255, 0.1);
+    --offblack3: rgba(255, 255, 255, 0.8);
+    --offwhite3: rgba(0, 0, 0, 0.1);
+    --offwhite4: rgba(0, 0, 0, 0.2);
+}
+
+@font-face {
+    font-family: 'red';
+    src: url(fonts/RedHatDisplay-VariableFont_wght.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'red';
+}
+
+body{
+    width: 1440px;
+    margin: 0 auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--black);
+}
+
+main{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--green);
+}
+
+
+header{
+    padding: 30px 501px 0 33px;
+        width: 906px;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 999;
+    transition: all 0.3s ease-in-out;
+}
+
+
+nav{
+    width: 438px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+        transition: all 0.3s ease-in-out;
+            padding: 15px 25px;
+    background: radial-gradient(231% 135.8% at 0.9% 2.98%, rgba(255, 255, 255, 0.40) 0%, rgba(255, 255, 255, 0.00) 100%);
+    backdrop-filter: blur(23.049999237060547px);
+    border-radius: 136px;
+}
+
+a{
+    color: var(--white);
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+text-decoration: none;
+}
+
+.selected{
+    font-weight: 900;
+}
+
+.navbtn{
+    width: 118px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.dark_mode_btn{
+    width: 70px;
+    height: 40px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(assets/dark.png);
+    background-size: cover;
+}
+
+body.light-mode .dark_mode_btn {
+    background-image: url('assets/light.png');
+}
+
+.language{
+    width: 38px;
+    height: 38px;
+    fill: var(--black);
+    border-radius: 50px;
+    stroke: var(--white);
+}
+
+.hero{
+    width: 1440px;
+    height: 891px;
+    background-image: url(assets/takeactionhero.png);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.herocont{
+    margin-right: 59px;
+    width: 627px;
+height: 629px;
+display: flex;
+flex-direction: column;
+align-items: flex-end;
+justify-content: space-between;
+}
+
+.stop{
+    color: white;
+text-align: right;
+font-size: 240px;
+font-style: normal;
+font-weight: 900;
+line-height: 102.017%; /* 244.84px */
+text-align: right;
+  line-height: 0.6; 
+}
+
+.smoking{
+    margin-top: -100px;
+    color: #FFF;
+font-size: 128px;
+font-style: normal;
+font-weight: 900;
+line-height: 102.017%;
+text-align: right;
+}
+
+p{
+    text-align: right;
+    color: var(--whitegreen);
+text-align: right;
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+width: 575px;
+}
+
+.herotext{
+    padding: 18px 90px;
+    color: var(--white);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    border-radius: 89px;
+    border: 1px solid var(--white);
+    background: var(--darkblu);
+    box-shadow: 11px 11px 58.2px 0 rgba(0, 0, 0, 0.25);
+    margin-top: 75px;
+}
+
+.cont{
+    width: 1440px;
+height: 1138px;
+background-color: var(--black);
+background-image: url(assets/contact.png);
+background-size: cover;
+}
+
+.conttitle{
+    width: 679px;
+    color: var(--white);
+font-family: "Red Hat Display";
+font-size: 40px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+margin-top: 59px;
+margin-left: 603px;
+}
+
+
+form {
+  width: 791px;
+  height: 687px;
+  display: flex;
+      align-items: flex-start;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 56px;
+  margin-left: 542px;
+}
+
+form input {
+  width: 791px;
+  height: 73px;
+  border-radius: 0 40px 40px 0;
+    background: var(--formbg);
+    font-size: 16px;
+}
+
+form textarea {
+  width: 791px;
+  height: 175px;
+  font-size: 16px;
+    border-radius: 0 40px 40px 0;
+    background: var(--formbg);
+    font-size: 16px;
+  resize: none;
+}
+
+button {
+  background-color: var(--white);
+  color: var(--black);
+  padding: 17px 180px;
+  border: none;
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s, color 0.3s;
+  margin-left: 510px;
+  margin-top: 57px;
+}
+
+
+form input,
+form textarea {
+  color: var(--white);
+    outline: none;
+      border: none;
+}
+
+
+input:focus,
+textarea:focus {
+  border-top: 1px solid var(--white);
+  border-right: 1px solid var(--white);
+  border-bottom: 1px solid var(--white);
+  border-left: none;
+}
+
+input,
+textarea {
+  padding-left: 30px; /* moves text inside */
+}

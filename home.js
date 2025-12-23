@@ -108,3 +108,19 @@ window.addEventListener('scroll', () => {
         header.classList.remove('shrink');
     }
 });
+
+
+
+const button = document.getElementById("toggle-mode");
+
+button.addEventListener("click", () => {
+  document.body.classList.toggle("light-mode");
+});
+
+
+const heroButton = document.querySelector('.herotext');
+const sec1 = document.getElementById('trigger-section');
+
+heroButton.addEventListener('click', () => {
+  sec1.scrollIntoView({ behavior: 'smooth' });
+});
