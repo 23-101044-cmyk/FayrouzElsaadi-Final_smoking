@@ -140,3 +140,18 @@ const button = document.getElementById("toggle-mode");
 button.addEventListener("click", () => {
   document.body.classList.toggle("light-mode");
 });
+
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const contactLink = document.getElementById("contactBtn");
+  const footer = document.getElementById("footer");
+
+  contactLink.addEventListener("click", (e) => {
+    e.preventDefault(); // Prevent default jump
+    footer.scrollIntoView({ behavior: "smooth" });
+  });
+});
+
+

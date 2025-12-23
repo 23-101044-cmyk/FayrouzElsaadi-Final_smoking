@@ -1,0 +1,107 @@
+:root{
+    --white: #fff;
+    --black: #000;
+    --purple: #1F032A;
+    --lightpur: #e8c8ff;
+    --red: #d52121;
+}
+
+
+@font-face {
+    font-family: 'red';
+    src: url(fonts/RedHatDisplay-VariableFont_wght.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'red';
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--purple);
+}
+
+h1{
+    color: var(--white);
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.herosub{
+    color: var(--white);
+    text-align: center;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.hint{
+    color: var(--white);
+    text-align: center;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+form{
+    width: 70vw;
+    height: 50vh;
+    display: flex; 
+    align-items: center; 
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.error{
+   color: var(--red); 
+   margin-top: 50px;
+   font-size: 32px;
+   text-align: center;
+}
+
+label{
+    color: var(--lightpur);
+    text-align: center;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-top: 40px;
+}
+
+#password{
+    width: 40vw;
+    height: 60px;
+    background-color: var(--white);
+    border-radius: 20px;
+}
+
+#username{
+    width: 40vw;
+    height: 60px;
+    background-color: var(--white);
+    border-radius: 20px;
+}
+
+button{
+    width: 15vw;
+    height: 40px;
+    border-radius: 50px;
+    background-color: var(--black);
+    border: 0.5px solid var(--white);
+    font-size: 14px;
+    color: var(--white);
+    text-align: center;
+    margin-top: 30px;
+}

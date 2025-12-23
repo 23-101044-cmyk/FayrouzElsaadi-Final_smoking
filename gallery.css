@@ -552,3 +552,10 @@ line-height: 27.024px; /* 150% */
 .card:hover .cardtext {
   margin-bottom: 30px;
 }
+
+footer{
+    width: 1440px;
+height: 400px;
+background-image: url(assets/footer.png);
+background-size: cover;
+}

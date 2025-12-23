@@ -665,3 +665,39 @@ footer{
 height: 400px;
 background-color: var(--black);
 }
+
+footer{
+    width: 1440px;
+height: 400px;
+background-image: url(assets/footer.png);
+background-size: cover;
+}
+
+#scrollTopBtn {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  width: 60px;
+  height: 60px;
+  background-color: var(--darkblu, #1F032A); /* fallback color */
+  color: var(--white, #fff);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0; /* initially hidden */
+  z-index: 1000;
+}
+
+#scrollTopBtn:hover {
+  transform: scale(1.1);
+}
+
+/* Show button when active */
+#scrollTopBtn.show {
+  opacity: 1;
+}

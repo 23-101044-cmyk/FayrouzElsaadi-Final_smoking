@@ -124,3 +124,34 @@ const sec1 = document.getElementById('trigger-section');
 heroButton.addEventListener('click', () => {
   sec1.scrollIntoView({ behavior: 'smooth' });
 });
+
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const contactLink = document.getElementById("contactBtn");
+  const footer = document.getElementById("footer");
+
+  contactLink.addEventListener("click", (e) => {
+    e.preventDefault(); // Prevent default jump
+    footer.scrollIntoView({ behavior: "smooth" });
+  });
+});
+const scrollBtn = document.getElementById("scrollTopBtn");
+
+// Show button after scrolling 200px
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 200) {
+    scrollBtn.classList.add("show");
+  } else {
+    scrollBtn.classList.remove("show");
+  }
+});
+
+// Scroll to top smoothly
+scrollBtn.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+});

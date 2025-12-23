@@ -550,3 +550,11 @@ line-height: normal;
         transform: translateY(0);
     }
 }
+
+
+footer{
+    width: 1440px;
+height: 400px;
+background-image: url(assets/footer.png);
+background-size: cover;
+}

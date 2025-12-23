@@ -220,7 +220,7 @@ width: 575px;
     border: 1px solid var(--white);
     background: var(--darkblu);
     box-shadow: 11px 11px 58.2px 0 rgba(0, 0, 0, 0.25);
-    margin-top: 75px;
+    width: 320px;
 }
 
 .cont{
@@ -310,4 +310,11 @@ textarea:focus {
 input,
 textarea {
   padding-left: 30px; /* moves text inside */
+}
+
+footer{
+    width: 1440px;
+height: 400px;
+background-image: url(assets/footer.png);
+background-size: cover;
 }

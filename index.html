@@ -4,10 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LOGIN</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 
 <body>
     
+        <h1>BREATHE FREE</h1>
+        <h5 class="herosub">Your lungs are not an ashtray.</h5>
+        <h5 class="hint">Hint: Username: souad, Password: 123</h5>
+
+    <form>
+        <label>username</label>
+        <input id="username" type="text" placeholder="Enter your username...">
+        <br><br>
+        <label>password</label>
+        <input id="password" type="password" placeholder="Enter password...">
+        <br><br>
+
+            <button type="button" onclick="login()" style="scale: 2;">
+                login
+            </button>
+
+        <h1 class="error" id="error"></h1>
+
+    </form>
+
+
+    <script src="code.js"></script>
+
 </body>
 
 
