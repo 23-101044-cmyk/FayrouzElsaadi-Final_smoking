@@ -199,3 +199,8 @@ navLinks.forEach(link => {
         link.classList.add("active");
     }
 });
+
+
+document.getElementById("booknow").addEventListener("click", () => {
+  window.location.href = "takeaction.html#cont";
+});

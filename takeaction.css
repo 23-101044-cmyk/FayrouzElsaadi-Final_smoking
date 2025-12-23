@@ -83,6 +83,7 @@ main{
 }
 
 
+
 header{
     padding: 30px 501px 0 33px;
         width: 932px;
@@ -124,14 +125,11 @@ nav a {
 
 nav a:hover {
     color: var(--white);
-    text-shadow: 0 0 5px var(--lightputple), 0 0 10px var(--lightputple);
+    font-weight: 700;
 }
-
 
 nav a.active {
     font-weight: 900;
-    text-shadow: 0 0 8px var(--white), 0 0 16px var(--grey); 
-    color: var(--white); 
 }
 
 .navbtn{
@@ -161,9 +159,12 @@ body.light-mode .dark_mode_btn {
 .language{
     width: 38px;
     height: 38px;
-    fill: var(--black);
-    border-radius: 50px;
-    stroke: var(--white);
+    background-image: url(assets/langdark.png);
+    background-size: cover;
+}
+
+body.light-mode .language {
+    background-image: url('assets/language.png');
 }
 
 .hero{
@@ -239,6 +240,11 @@ height: 1138px;
 background-color: var(--black);
 background-image: url(assets/contact.png);
 background-size: cover;
+}
+
+body.light-mode .cont {
+    background-image: url('assets/contactwhite.png');
+    background-size: cover;
 }
 
 .conttitle{
@@ -352,11 +358,98 @@ textarea {
   to { transform: rotate(360deg); }
 }
 
+
 footer{
-    width: 1440px;
-height: 400px;
-background-image: url(assets/footer.png);
-background-size: cover;
+    width: 1307.887px;
+    height: 278.4px;
+    padding: 70px 66px 51.6px 67px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--black);
+}
+
+.footerlinks{
+    width: 1080px;
+    height: auto;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.footercont{
+    height: auto;
+    display: flex;
+    align-items: flex-start;
+    gap: 9px;
+    flex-direction: column;
+
+}
+
+.footertitle{
+    color: var(--white);
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    
+}
+
+.slogan{
+    color: var(--white);
+font-size: 40px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+
+.leftalign{
+    text-align: left;
+    width: 224px;
+    color: var(--white);
+    text-decoration: none;
+}
+
+.leftalign2{
+    text-align: left;
+    width: 300px;
+    padding-right: 120px;
+    color: var(--white);
+}
+
+.linktiles{
+    color: var(--white);
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+margin-bottom: 10px;
+}
+
+.line{
+    background-color: var(--white);
+    width: 1280px;
+    height: 1px;
+}
+
+.policy{
+    width: 1280px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.terms{
+    font-size: 14px;
+    text-align: left;
+    color: var(--white);
+}
+
+.mright{
+    margin-right: 800px;
 }
 
 #scrollTopBtn {

@@ -124,3 +124,12 @@ navLinks.forEach(link => {
         link.classList.add("active");
     }
 });
+
+
+
+document.getElementById("takeActionBtn").addEventListener("click", () => {
+    document.querySelector(".cont").scrollIntoView({
+        behavior: "smooth"
+    });
+});
+
