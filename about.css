@@ -10,6 +10,7 @@
     --vid: rgba(0, 0, 0, 0.681);
     --lightgrey: #8F8F8F;
     --darkgrey: #282828;
+    --grey: #3C3C3C;
 }
 
 @font-face {
@@ -405,4 +406,121 @@ margin: 0 0 25px 25px;
 
 .name{
     margin: 0 0 0 25px;
+}
+
+
+.sec3{
+    background-color: var(--grey);
+    width: 1440px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Header */
+.sec3-header{
+    text-align: center;
+    margin-bottom: 48px;
+    margin-top: 77px;
+}
+
+.height{
+        line-height: 50px;
+}
+
+.sec3-subtitle{
+    margin-top: 12px;
+    opacity: 0.8;
+    color: var(--white);
+text-align: center;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+/* Grid */
+.cards-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 26px;
+    width: 90%;
+    margin-bottom: 80px;
+}
+
+/* Cards */
+.info-card{
+    background-color: var(--darkgrey);
+    border-radius: 14px;
+    padding: 28px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: riseIn 0.8s ease forwards;
+    transition: 
+        box-shadow 0.3s ease,
+        transform 0.3s ease;
+}
+
+/* Stagger */
+.info-card:nth-child(1){ animation-delay: 0.1s; }
+.info-card:nth-child(2){ animation-delay: 0.15s; }
+.info-card:nth-child(3){ animation-delay: 0.2s; }
+.info-card:nth-child(4){ animation-delay: 0.25s; }
+.info-card:nth-child(5){ animation-delay: 0.3s; }
+.info-card:nth-child(6){ animation-delay: 0.35s; }
+.info-card:nth-child(7){ animation-delay: 0.4s; }
+.info-card:nth-child(8){ animation-delay: 0.45s; }
+
+
+.card-title{
+    margin-bottom: 12px;
+    color: var(--white);
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.card-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 2; 
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--lightgrey);
+}
+
+.cards-container.expanded .card-text {
+    -webkit-line-clamp: unset;
+}
+
+.read-more {
+    margin-top: 12px;
+    display: inline-block;
+    color: var(--white);
+    font-size: 14px;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.read-more:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+.info-card:hover{
+    transform: translateY(-6px);
+    box-shadow: 0 14px 32px rgba(0,0,0,0.14);
+}
+
+
+@keyframes riseIn{
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

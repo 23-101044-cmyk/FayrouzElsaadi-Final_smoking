@@ -59,8 +59,74 @@ for (let i = 0; i < tips.length; i++) {
                     <p class="textalign">${tips[i].text}</p>
                 </div>
  
-    
   `;
 }
 
 document.getElementById("tips").innerHTML = html;
+
+
+
+const cards = [
+  {
+    title: "Professional Smoking Cessation Programs",
+    text: "Structured smoking cessation programs led by trained healthcare professionals provide personalized guidance, evidence-based strategies, and ongoing support. These programs significantly increase long-term quit success by addressing both physical addiction and behavioral habits while offering accountability throughout the quitting process."
+  },
+  {
+    title: "One-on-One Counseling",
+    text: "Individual counseling sessions focus on understanding personal smoking triggers, stress responses, and emotional patterns. Through guided conversations and behavioral techniques, counseling helps build coping strategies, strengthen motivation, and reduce the likelihood of relapse over time."
+  },
+  {
+    title: "Prescription Treatment Plans",
+    text: "Doctor-prescribed medications are designed to safely reduce nicotine cravings and withdrawal symptoms. When combined with behavioral support, these treatment plans can make the quitting process more manageable and improve overall success rates without relying solely on willpower."
+  },
+  {
+    title: "Quitlines & Telehealth Support",
+    text: "National quitlines and telehealth services offer free, confidential access to trained counselors through phone calls or virtual appointments. These services provide convenient follow-ups, emotional encouragement, and practical quitting advice regardless of location or schedule."
+  },
+  {
+    title: "Cognitive Behavioral Therapy (CBT)",
+    text: "Cognitive Behavioral Therapy helps individuals recognize and change negative thought patterns that contribute to smoking behavior. By reframing habits and responses to stress, CBT reduces relapse risk and supports long-term behavior change beyond initial quitting."
+  },
+  {
+    title: "Trigger Identification & Tracking",
+    text: "Tracking emotional, social, and environmental triggers allows individuals to better understand when and why cravings occur. Identifying these patterns makes it easier to prepare alternative responses and reduce automatic smoking behaviors in daily life."
+  },
+  {
+    title: "Accountability & Support Systems",
+    text: "Support from friends, family members, counselors, or structured groups increases accountability and motivation. Regular check-ins and encouragement help reinforce commitment and provide reassurance during difficult moments in the quitting journey."
+  },
+  {
+    title: "Long-Term Relapse Prevention",
+    text: "Relapse prevention focuses on maintaining progress after quitting through continued follow-ups, lifestyle adjustments, and coping strategies. Long-term planning helps individuals manage stress, avoid triggers, and sustain a smoke-free life."
+  }
+];
+
+
+
+let cardhtml = "";
+
+for (let i = 0; i < cards.length; i++) {
+  cardhtml += `
+        <div class="info-card">
+      <h5 class="card-title">${cards[i].title}</h5>
+      <p class="card-text">${cards[i].text}</p>
+      <span class="read-more">Read more</span>
+    </div>
+  `;
+}
+
+document.querySelector(".cards-container").innerHTML = cardhtml;
+
+
+const container = document.querySelector(".cards-container");
+
+container.addEventListener("click", (e) => {
+  if (!e.target.classList.contains("read-more")) return;
+
+  container.classList.toggle("expanded");
+
+  const expanded = container.classList.contains("expanded");
+  document.querySelectorAll(".read-more").forEach(btn => {
+    btn.textContent = expanded ? "Read less" : "Read more";
+  });
+});
