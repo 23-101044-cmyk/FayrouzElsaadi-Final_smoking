@@ -72,7 +72,7 @@ body{
     display: flex;
     align-items: center;
     flex-direction: column;
-    background-color: var(--black);
+    background-color: var(--green);
 }
 
 main{
@@ -97,31 +97,41 @@ header{
 }
 
 
-nav{
+nav {
     width: 438px;
     height: auto;
     display: flex;
     align-items: center;
     flex-direction: row;
     justify-content: space-between;
-        transition: all 0.3s ease-in-out;
-            padding: 15px 25px;
+    transition: all 0.3s ease-in-out;
+    padding: 15px 25px;
     background: radial-gradient(231% 135.8% at 0.9% 2.98%, rgba(255, 255, 255, 0.40) 0%, rgba(255, 255, 255, 0.00) 100%);
-    backdrop-filter: blur(23.049999237060547px);
+    backdrop-filter: blur(23.05px);
     border-radius: 136px;
 }
 
-a{
+nav a {
     color: var(--white);
-font-size: 18px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-text-decoration: none;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration: none;
+    transition: all 0.3s ease;
 }
 
-.selected{
+
+nav a:hover {
+    color: var(--white);
+    text-shadow: 0 0 5px var(--lightputple), 0 0 10px var(--lightputple);
+}
+
+
+nav a.active {
     font-weight: 900;
+    text-shadow: 0 0 8px var(--white), 0 0 16px var(--grey); 
+    color: var(--white); 
 }
 
 .navbtn{
@@ -355,8 +365,8 @@ background-size: cover;
   right: 40px;
   width: 60px;
   height: 60px;
-  background-color: var(--darkblu, #1F032A);
-  color: var(--white, #fff);
+  background-color: var(--darkblu, var(--lightputple));
+  color: var(--white, var(--white));
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -367,6 +377,8 @@ background-size: cover;
   transition: transform 0.3s ease, opacity 0.3s ease;
   opacity: 0;
   z-index: 1000;
+  right: 250px;
+  border: 1px solid var(--white);
 }
 
 #scrollTopBtn:hover {

@@ -40,7 +40,7 @@ body{
     display: flex;
     align-items: center;
     flex-direction: column;
-    background-color: var(--black);
+    background-color: var(--purple);
 }
 
 main{
@@ -76,28 +76,40 @@ header.shrink nav{
     border-radius: 136px;
 }
 
-nav{
+nav {
     width: 438px;
     height: auto;
     display: flex;
     align-items: center;
     flex-direction: row;
     justify-content: space-between;
-        transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
-a{
+nav a {
     color: var(--white);
-font-size: 18px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-text-decoration: none;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration: none;
+    transition: all 0.3s ease;
 }
 
-.selected{
-    font-weight: 900;
+
+nav a:hover {
+    color: var(--white);
+    text-shadow: 0 0 5px var(--lightputple), 0 0 10px var(--lightputple);
 }
+
+
+nav a.active {
+    font-weight: 900;
+    text-shadow: 0 0 8px var(--white), 0 0 16px var(--grey); 
+    color: var(--white); 
+}
+
+
 
 .navbtn{
     width: 118px;
@@ -708,8 +720,8 @@ background-size: cover;
   right: 40px;
   width: 60px;
   height: 60px;
-  background-color: var(--darkblu, #1F032A);
-  color: var(--white, #fff);
+  background-color: var(--darkblu, var(--lightputple));
+  color: var(--white, var(--white));
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -720,6 +732,8 @@ background-size: cover;
   transition: transform 0.3s ease, opacity 0.3s ease;
   opacity: 0;
   z-index: 1000;
+  right: 250px;
+  border: 1px solid var(--white);
 }
 
 #scrollTopBtn:hover {

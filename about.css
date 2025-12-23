@@ -46,7 +46,7 @@ body{
     display: flex;
     align-items: center;
     flex-direction: column;
-    background-color: var(--black);
+    background-color: var(--lightgrey);
     transition: all 0.3s ease;
 }
 
@@ -83,27 +83,36 @@ header.shrink nav{
     border-radius: 136px;
 }
 
-nav{
+nav {
     width: 438px;
     height: auto;
     display: flex;
     align-items: center;
     flex-direction: row;
     justify-content: space-between;
-        transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
-a{
+nav a {
     color: var(--white);
-font-size: 18px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-text-decoration: none;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration: none;
+    transition: all 0.3s ease;
 }
 
-.selected{
+
+nav a:hover {
+    color: var(--white);
+    text-shadow: 0 0 5px var(--lightputple), 0 0 10px var(--lightputple);
+}
+
+nav a.active {
     font-weight: 900;
+    text-shadow: 0 0 8px var(--white), 0 0 16px var(--grey); 
+    color: var(--white); 
 }
 
 .navbtn{

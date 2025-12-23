@@ -143,7 +143,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 const scrollBtn = document.getElementById("scrollTopBtn");
 
-
 window.addEventListener("scroll", () => {
   if (window.scrollY > 200) {
     scrollBtn.classList.add("show");
@@ -186,4 +185,17 @@ document.querySelectorAll("a").forEach(link => {
       }, 300); 
     }
   });
+});
+
+
+
+const navLinks = document.querySelectorAll("nav a");
+
+navLinks.forEach(link => {
+    const linkPage = link.getAttribute("href");
+    const currentPage = window.location.pathname.split("/").pop();
+
+    if (linkPage === currentPage) {
+        link.classList.add("active");
+    }
 });
