@@ -26,12 +26,27 @@ function login() {
 
 
 window.addEventListener("load", () => {
-  const preloader = document.getElementById("preloader");
-  preloader.style.opacity = "0";
-  setTimeout(() => {
-    preloader.style.display = "none";
-  }, 500);
+    const preloader = document.getElementById('preloader');
+    const progressBar = document.getElementById('progress-bar');
+    let progress = 0;
+
+    // Fill the progress bar smoothly
+    const interval = setInterval(() => {
+        progress += Math.random() * 10; // random increment
+        if (progress > 100) progress = 100;
+        progressBar.style.width = progress + '%';
+
+        if (progress >= 100) {
+            clearInterval(interval);
+            // Fade out preloader
+            preloader.style.opacity = 0;
+            setTimeout(() => {
+                preloader.style.display = 'none';
+            }, 500);
+        }
+    }, 100);
 });
+
 
 
 

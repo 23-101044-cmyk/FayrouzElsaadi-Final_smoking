@@ -158,29 +158,27 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 window.addEventListener("load", () => {
-  const preloader = document.getElementById("preloader");
-  preloader.style.opacity = "0";
-  setTimeout(() => {
-    preloader.style.display = "none";
-  }, 500);
+    const preloader = document.getElementById('preloader');
+    const progressBar = document.getElementById('progress-bar');
+    let progress = 0;
+
+
+    const interval = setInterval(() => {
+        progress += Math.random() * 10;
+        if (progress > 100) progress = 100;
+        progressBar.style.width = progress + '%';
+
+        if (progress >= 100) {
+            clearInterval(interval);
+            // Fade out preloader
+            preloader.style.opacity = 0;
+            setTimeout(() => {
+                preloader.style.display = 'none';
+            }, 500);
+        }
+    }, 100);
 });
 
-
-
-document.querySelectorAll("a").forEach(link => {
-  link.addEventListener("click", (e) => {
-    const href = link.getAttribute("href");
-    if (href && href !== "#") {
-      e.preventDefault(); 
-      const preloader = document.getElementById("preloader");
-      preloader.style.display = "flex";
-      preloader.style.opacity = "1";
-      setTimeout(() => {
-        window.location.href = href;
-      }, 300); 
-    }
-  });
-});
 
 
 
